@@ -53,9 +53,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return true;
       break;
     case KC_CAPS:
-      dprintf("CAPS STATE: %u\n", _capsLockState);
-      _capsLockState = !_capsLockState;
-      _capsLockState ? PLAY_SONG(capsOnSong) : PLAY_SONG(capsOffSong);
+      if (record->event.pressed) {
+        dprintf("CAPS STATE: %u\n", _capsLockState);
+        _capsLockState = !_capsLockState;
+        _capsLockState ? PLAY_SONG(capsOnSong) : PLAY_SONG(capsOffSong);
+      }
       return true;
       break;
   }

@@ -26,21 +26,6 @@ const int _layerCount = 7;
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
 
-#define QWERTY_LAYER_SONG H__NOTE(_BF5), H__NOTE(_C6), H__NOTE(_DF6), H__NOTE(_A5), \
-        H__NOTE(_BF5), H__NOTE(_GF5), W__NOTE(_F5), W__NOTE(_F5), W__NOTE(_F5),
-#define MAC_LAYER_SONG H__NOTE(_E5), H__NOTE(_A5), Q__NOTE(_D6), Q__NOTE(_G6), \
-        ED_NOTE(_E7), E__NOTE(_CS7), E__NOTE(_E6), E__NOTE(_A6), M__NOTE(_CS7, 20),
-#define LONG_AG_SWAP Q__NOTE(_G5), Q__NOTE(_D6), Q__NOTE(_A6), Q__NOTE(_E7), \
-        SD_NOTE(_B5), SD_NOTE(_A5), SD_NOTE(_B5), SD_NOTE(_A5),
-#define LONG_AG_NORM  Q__NOTE(_DS4),  Q__NOTE(_DS4), B__NOTE(_C5),
-#define MOVE_LAYER_SONG E__NOTE(_GS6), E__NOTE(_A6), S__NOTE(_REST), ED_NOTE(_E7), \
-        S__NOTE(_REST), ED_NOTE(_GS7),
-#define RAISE_LAYER_SONG W__NOTE(_BF5), Q__NOTE(_A5), W__NOTE(_BF5), Q__NOTE(_A5), W__NOTE(_E6), Q__NOTE(_B5),
-#define LOWER_LAYER_SONG Q__NOTE(_DS4), E__NOTE(_DS4), E__NOTE(_DS6), Q__NOTE(_DS5), \
-        E__NOTE(_DS5), E__NOTE(_DS6), Q__NOTE(_E5), E__NOTE(_E5), E__NOTE(_DS6), Q__NOTE(_DS5),
-#define CAPS_ON  W__NOTE(_E5), Q__NOTE(_BF5), W__NOTE(_E5), Q__NOTE(_BF5), W__NOTE(_E5), Q__NOTE(_BF5),
-#define CAPS_OFF W__NOTE(_E5), Q__NOTE(_BF5),
-
 void playSongForLayer(int currentLayer);
 
 float capsOnSong[][2]                  = SONG(CAPS_ON);

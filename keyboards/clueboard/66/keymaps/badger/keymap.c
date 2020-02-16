@@ -7,7 +7,7 @@ enum layers {
   _MOVE
 };
 
-bool _capsLockState;
+bool _capsLockState                    = false;
 float capsOnSong[][2]                  = SONG(CAPS_ON);
 float capsOffSong[][2]                 = SONG(CAPS_OFF);
 /* float defaultLayerSong[][2]            = SONG(QWERTY_LAYER_SONG);
@@ -41,10 +41,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______,    _______,  _______,  _______,  _______,  _______,  _______,  KC_HOME,  KC_BRID,  KC_END)
 };
 
-void keyboard_post_init_user(void) {
-  _capsLockState = false;
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   dprintf("Key event recorded.  KEYCODE: %u, event: %u\n", keycode, record->event.pressed);
   switch (keycode) {
@@ -57,12 +53,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return true;
       break;
     case KC_CAPS:
-      if (_capsLockState) {
-        PLAY_SONG(capsOffSong);
-      } else {
-        PLAY_SONG(capsOnSong);
-      }
+      dprintf("CAPS STATE: %u\n", _capsLockState);
       _capsLockState = !_capsLockState;
+      _capsLockState ? PLAY_SONG(capsOnSong) : PLAY_SONG(capsOffSong);
       return true;
       break;
   }

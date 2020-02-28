@@ -39,6 +39,8 @@
 /* IntelliJ / JetBrains shortcuts */
 #define IJ_BACK    LGUI(LALT(KC_LEFT))
 #define IJ_FWD     LGUI(LALT(KC_RIGHT))
+#define IJ_UP      LGUI(LALT(KC_UP))
+#define IJ_DOWN    LGUI(LALT(KC_DOWN))
 #define IJ_IMPL    LGUI(LALT(KC_B))
 #define IJ_DECL    LGUI(KC_B)
 #define IJ_REN     LSFT(KC_F6)
@@ -47,6 +49,7 @@
 #define IJ_STEP    KC_F8
 #define IJ_INTO    LSFT(KC_F7)
 #define IJ_OUT     LSFT(KC_F8) 
+#define IJ_STOP    LGUI(KC_F2) 
 
 /* MacOS virtual desktop shortcuts */
 #define M_VD1      LCTL(KC_1)

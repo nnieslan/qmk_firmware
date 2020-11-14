@@ -31,7 +31,7 @@ enum CustomKeys {
 };
 
 #define OS_POP     LCTL(KC_F10)
-#define MAC_POP    LCTL(KC_UP)
+#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))                         
 #define MAC_FRC    LGUI(LALT(KC_ESC))
 #define OS_COPY    LSFT(LCTL(KC_C))
 #define OS_PAST    LSFT(LCTL(KC_V))
@@ -43,8 +43,8 @@ enum CustomKeys {
 #define MOVE       LT(_MOVE_LINUX, KC_ESC)
 #define MOVE_MAC   LT(_MOVE_MAC, KC_ESC)
 #define ADJUST     MO(_ADJUST)
-#define CFG_MAC    LT(_CONFIG, MAC_POP)
-#define CFG_LNX    LT(_CONFIG, OS_POP)
+#define CFG_MAC    MO(_CONFIG)
+#define CFG_LNX    MO(_CONFIG)
 
 #define WD_BACK    LALT(KC_LEFT)
 #define WD_FRWD    LALT(KC_RIGHT)
@@ -79,13 +79,14 @@ enum CustomKeys {
 #define IJ_RUN     KC_F9
 #define IJ_STEP    KC_F8
 #define IJ_INTO    LSFT(KC_F7)
-#define IJ_OUT     LSFT(KC_F8) 
-#define IJ_STOP    LGUI(KC_F2) 
+#define IJ_OUT     LSFT(KC_F8)
+#define IJ_STOP    LGUI(KC_F2)
 #define IJ_IMPS    LCTL(LALT(LSFT(KC_EQUAL)))
 #define IJ_IMPH    LCTL(LALT(LSFT(KC_MINUS)))
 #define IJ_TOP     LGUI(KC_HOME)
 #define IJ_BOTT    LGUI(KC_END)
 #define IJ_FIND    LGUI(LSFT(KC_F))
+#define IJ_RELD    LGUI(LSFT(KC_F9))
 
 /* MacOS virtual desktop shortcuts */
 #define M_VD1      LCTL(KC_1)

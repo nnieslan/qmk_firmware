@@ -31,7 +31,7 @@ enum CustomKeys {
 };
 
 #define OS_POP     LCTL(KC_F10)
-#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))                         
+#define MAC_POP    LCTL(KC_UP)                      
 #define MAC_FRC    LGUI(LALT(KC_ESC))
 #define OS_COPY    LSFT(LCTL(KC_C))
 #define OS_PAST    LSFT(LCTL(KC_V))

@@ -98,7 +98,7 @@ enum CustomKeys {
 #define MM_URCN    LCTL(LGUI(KC_RIGHT))
 #define MM_LLCN    LCTL(LSFT(LGUI(KC_LEFT)))
 #define MM_LRCN    LCTL(LSFT(LGUI(KC_RIGHT)))
-#define MM_MAX     LALT(LGUI(KC_F))
+#define MM_MAX     LCTL(LALT(KC_ENTER))
 #define MM_LH      HYPR(KC_LBRC)
 #define MM_RH      HYPR(KC_RBRC)
 #define MM_UH      LALT(LGUI(KC_UP))

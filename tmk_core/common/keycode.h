@@ -112,7 +112,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_APP KC_APPLICATION
 #define KC_EXEC KC_EXECUTE
 #define KC_SLCT KC_SELECT
-#define KC_AGIN KC_AGAIN
+#define KC_AGIN KC_AGAIN]]]]]]]]]]]]]
 #define KC_PSTE KC_PASTE
 #define KC_ERAS KC_ALT_ERASE
 #define KC_CLR KC_CLEAR

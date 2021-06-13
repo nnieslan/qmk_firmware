@@ -48,6 +48,7 @@ enum CustomKeys {
 
 #define WD_BACK    LALT(KC_LEFT)
 #define WD_FRWD    LALT(KC_RIGHT)
+#define WD_DELE    LALT(KC_BSPC)
 
 #define VD_1       LCTL(KC_F1)
 #define VD_2       LCTL(KC_F2)

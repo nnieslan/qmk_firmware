@@ -31,7 +31,7 @@ enum CustomKeys {
 };
 
 #define OS_POP     LCTL(KC_F10)
-#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))                         
+#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))
 #define MAC_FRC    LGUI(LALT(KC_ESC))
 #define OS_COPY    LSFT(LCTL(KC_C))
 #define OS_PAST    LSFT(LCTL(KC_V))
@@ -88,6 +88,18 @@ enum CustomKeys {
 #define IJ_BOTT    LGUI(KC_END)
 #define IJ_FIND    LGUI(LSFT(KC_F))
 #define IJ_RELD    LGUI(LSFT(KC_F9))
+
+/* VS Code shortcuts */
+#define VS_CMD     LGUI(LSFT(KC_A))
+#define VS_EXP     LGUI(LSFT(KC_E))
+#define VS_DBG     LGUI(LSFT(KC_F8))
+#define VS_SCC     LCTL(LSFT(KC_G))
+#define VS_RUN     KC_F5
+#define VS_STEP    KC_F8
+#define VS_INTO    KC_F7
+#define VS_BPT     LGUI(KC_F8)
+#define VS_OUT     LSFT(KC_F8)
+#define VS_STOP    LSFT(KC_F5)
 
 /* MacOS virtual desktop shortcuts */
 #define M_VD1      LCTL(KC_1)

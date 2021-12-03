@@ -1,99 +1,36 @@
-# Quantum Mechanical Keyboard Configurator
+# Quantum Mechanical Keyboard Firmware
 
-[![Build Status](https://github.com/qmk/qmk_configurator/workflows/Website%20build/badge.svg)](https://github.com/qmk/qmk_configurator/actions)
-[![Known Vulnerabilities](https://snyk.io/test/github/qmk/qmk_configurator/badge.svg)](https://snyk.io/test/github/qmk/qmk_configurator)
+[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_configurator.svg)](https://github.com/qmk/qmk_configurator/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_configurator.svg?style=social&label=Fork)](https://github.com/qmk/qmk_configurator/)
+[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
+[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
+[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
 
-The QMK Configurator is an online tool used for easily creating firmware files for keyboards supported in [qmk_firmware](https://github.com/qmk/qmk_firmware). The tool is located on https://config.qmk.fm.
+This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the [Clueboard product line](https://clueboard.co).
 
-The QMK Configurator allows simple keymap creation and saving via .json keymap files, and generates appropriate firmware files for flashing onto selected keyboards.
+## Documentation
 
-This project is very much a work in progress. To begin contributing, please refer to the following:
+* [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
 
- * [Issues](https://github.com/qmk/qmk_configurator/issues)
+The docs are powered by [Docsify](https://docsify.js.org/) and hosted on [GitHub](/docs/). They are also viewable offline; see [Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation) for more details.
 
-## Development
+You can request changes by making a fork and opening a [pull request](https://github.com/qmk/qmk_firmware/pulls), or by clicking the "Edit this page" link at the bottom of any page.
 
-We recommend you install and use [NVM](https://github.com/creationix/nvm) to manage node versions. There is a .nvmrc file in the root of the project directory that has been tested with our dependencies.
+## Supported Keyboards
 
-### Select node version
-```shell
-nvm use
-```
+* [Planck](/keyboards/planck/)
+* [Preonic](/keyboards/preonic/)
+* [ErgoDox EZ](/keyboards/ergodox_ez/)
+* [Clueboard](/keyboards/clueboard/)
+* [Cluepad](/keyboards/clueboard/17/)
+* [Atreus](/keyboards/atreus/)
 
-### Project setup
-```
-yarn install
-```
+The project also includes community support for [lots of other keyboards](/keyboards/).
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Maintainers
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by [Zach White](https://github.com/skullydazed), and the Atreus by [Phil Hagelberg](https://github.com/technomancy).
 
-### Run your tests
-```
-yarn run test
-```
+## Official Website
 
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Run your end-to-end tests
-Start the server separatly
-```
-yarn run test:cypress
-```
-
-### Run your end-to-end tests like CI
-Start the server separatly
-```
-yarn run test:cypress:ci
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## Docker
-
-If you don't have a webserver already and don't already have one in mind you can use docker. By default it spins up a self-contained environment.
-
-    docker run -p 8080:80 qmkfm/qmk_configurator:latest
-
-You can specify a different backend URL by setting `VUE_APP_API_URL`:
-
-    docker run -e VUE_APP_API_URL=http://localhost:8080 -p 8080:80 qmkfm/qmk_configurator:latest
-
-If you'd like to develop locally you can use a volume to tie your local filesystem to the container:
-
-    docker run --mount type=volume,source=.,target=/qmk_configurator -p 8080:80 qmkfm/qmk_configurator:latest
-
-### Building The Docker Image
-
-Most of the time you don't need to do this, you can use volume mounts as described above to use the pre-built image with your local tree. 
-
-If for some reason you do need to build it yourself, you can use this command:
-
-    docker build -t qmk_configurator .
-
-This process will take a while. You may want to go make some tea or something. When it finishes you can run it with this command:
-
-    docker run -p 8080:80 qmk_configurator
-    
-## Internationalization Guide
-
-Please refer to [this document](internationalization_guide.md)
+[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.

@@ -27,7 +27,8 @@ enum layers {
 
 enum CustomKeys {
   CS_RIGHT = SAFE_RANGE,
-  CS_DOWN
+  CS_DOWN,
+  SHEBANG
 };
 
 #define OS_POP     LCTL(KC_F10)
@@ -37,8 +38,8 @@ enum CustomKeys {
 #define OS_PAST    LSFT(LCTL(KC_V))
 #define MAC_PST    LGUI(KC_V)
 #define MAC_CPY    LGUI(KC_C)
-#define KC_BACK    LCTL(LSFT(KC_LBRC))
-#define KC_NEXT    LCTL(LSFT(KC_RBRC))
+#define KC_BACK    LGUI(KC_LBRC)
+#define KC_NEXT    LGUI(KC_RBRC)
 
 #define MOVE       LT(_MOVE_LINUX, KC_ESC)
 #define MOVE_MAC   LT(_MOVE_MAC, KC_ESC)
@@ -100,6 +101,11 @@ enum CustomKeys {
 #define VS_BPT     LGUI(KC_F8)
 #define VS_OUT     LSFT(KC_F8)
 #define VS_STOP    LSFT(KC_F5)
+#define VS_TERM    LSFT(KC_ESC)
+#define VS_FILE    LSFT(LGUI(KC_O))
+#define VS_LINE    LGUI(KC_L)
+#define VS_MVUP    LSFT(LALT(KC_UP))
+#define VS_MVDN    LSFT(LALT(KC_DOWN))
 
 /* MacOS virtual desktop shortcuts */
 #define M_VD1      LCTL(KC_1)
@@ -120,4 +126,5 @@ enum CustomKeys {
 #define MM_RGHT    LCTL(LALT(LGUI(KC_RIGHT)))
 
 #define DF_1       DF(_QWERTY_MAC)
-#define DF_2       DF(_QWERTY_LINUX)
+#define DF_2       DF(_MOVE_MAC)
+#define DF_3       DF(_QWERTY_LINUX)

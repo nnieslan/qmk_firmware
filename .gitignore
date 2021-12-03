@@ -1,37 +1,32 @@
-<<<<<<< HEAD
-.history/
-.dep
-*.o
-*.bin
-*.eep
+# Junk files
+*.bak
+*.swp
+*~
+.DS_Store
+
+# Build artifacts
+.clang_complete
+.build/
 *.elf
-*.hex
-*.uf2
-*.qmk
-!util/bootloader.hex
-!quantum/tools/eeprom_reset.hex
 *.log
 *.lss
 *.lst
 *.map
+*.o
+*.stackdump
 *.sym
-*.swp
-tags
-*~
+
+# QMK-specific
 api_data/v1
-build/
-.build/
-*.bak
-.vagrant/
-quantum/version.h
-.idea/
-CMakeLists.txt
-cmake-build-debug
-.clang_complete
 doxygen/
-.DS_Store
-/util/wsl_downloaded
-/util/win_downloaded
+quantum/version.h
+*.bin
+*.eep
+*.hex
+*.qmk
+*.uf2
+
+# Old-style QMK Makefiles
 /keyboards/*/Makefile
 /keyboards/*/*/Makefile
 /keyboards/*/*/*/Makefile
@@ -44,84 +39,55 @@ doxygen/
 /keyboards/*/*/*/*/*/keymaps/Makefile
 
 # Eclipse/PyCharm/Other IDE Settings
-.cproject
-.project
-.settings/
-.idea
 *.iml
 .browse.VC.db*
-*.stackdump
+.cproject
+.idea
+.idea/
+.project
+.settings/
+.vagrant/
+
+# ?
+.dep
+.history/
+build/
+cmake-build-debug
+CMakeLists.txt
+
 # Let these ones be user specific, since we have so many different configurations
 *.code-workspace
-.vscode/c_cpp_properties.json
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/last.sql
-.vscode/temp.sql
-.vscode/ipch/
 .stfolder
 .tags
+.vscode/c_cpp_properties.json
+.vscode/ipch/
+.vscode/last.sql
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/temp.sql
+tags
 
-# ignore image files
-*.png
+# Ignore image files
 *.gif
 *.jpg
+*.png
 
-# things travis sees
-secrets.tar
-id_rsa_*
+# Things Travis sees
 /.vs
+id_rsa_*
+secrets.tar
 
-# python things
+# Python things
 __pycache__
 .python-version
 
-# prerequisites for updating ChibiOS
+# Prerequisites for updating ChibiOS
 /util/fmpp*
 
 # Allow to exist but don't include it in the repo
 user_song_list.h
-=======
-_site/*
-.sass-cache/*
-/.idea/
-id_rsa_*
-secrets.tar
-.bundle/*
-vendor/*
-*.sw[po]
-node_modules
-/functional_tests/bin/selenium-server-standalone-3.12.0.jar
-/functional_tests/bin
-/functional_tests/tmp
-/selenium-debug.log
-/functional_tests/reports/
-/selenium-server.log
-/cypress
 
-.DS_Store
-node_modules
-/dist
-
-/tests/e2e/reports/
-selenium-debug.log
-
-# local env files
-.env.local
-.env.*.local
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw*
-ga-production.js
->>>>>>> e822a8fb597d1518748b9c7f5c1f1fb427bc379f
+# clangd
+compile_commands.json
+.clangd/
+.cache/

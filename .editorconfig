@@ -5,7 +5,12 @@ root = true
 
 [*]
 indent_style = space
+<<<<<<< HEAD
 indent_size = 4
+=======
+indent_size = 2
+end_of_line = lf
+>>>>>>> e822a8fb597d1518748b9c7f5c1f1fb427bc379f
 
 # We recommend you to keep these unchanged
 charset = utf-8
@@ -16,6 +21,7 @@ insert_final_newline = true
 trim_trailing_whitespace = false
 indent_size = 4
 
+<<<<<<< HEAD
 [{qmk,*.py}]
 charset = utf-8
 max_line_length = 200
@@ -28,10 +34,19 @@ indent_style = tab
 [Makefile]
 end_of_line = lf
 indent_style = tab
+=======
+# Make these match what we have in .gitattributes
+[*.mk]
+end_of_line = lf
+
+[Makefile]
+end_of_line = lf
+>>>>>>> e822a8fb597d1518748b9c7f5c1f1fb427bc379f
 
 [*.sh]
 end_of_line = lf
 
+<<<<<<< HEAD
 # The gitattributes file will handle the line endings conversion properly according to the operating system settings for other files
 
 
@@ -40,3 +55,18 @@ end_of_line = lf
 # the line endings would be wrong.
 [lib/**]
 end_of_line = unset
+=======
+[*.json]
+end_of_line = lf
+
+[*.css]
+end_of_line = lf
+
+[*.js]
+end_of_line = lf
+
+[*.vue]
+end_of_line = lf
+
+# The gitattributes file will handle the line endings conversion properly according to the operating system settings for other files
+>>>>>>> e822a8fb597d1518748b9c7f5c1f1fb427bc379f

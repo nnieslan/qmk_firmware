@@ -27,18 +27,19 @@ enum layers {
 
 enum CustomKeys {
   CS_RIGHT = SAFE_RANGE,
-  CS_DOWN
+  CS_DOWN,
+  SHEBANG
 };
 
 #define OS_POP     LCTL(KC_F10)
-#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))                         
+#define MAC_POP    LT(_CONFIG, LCTL(KC_UP))
 #define MAC_FRC    LGUI(LALT(KC_ESC))
 #define OS_COPY    LSFT(LCTL(KC_C))
 #define OS_PAST    LSFT(LCTL(KC_V))
 #define MAC_PST    LGUI(KC_V)
 #define MAC_CPY    LGUI(KC_C)
-#define KC_BACK    LCTL(LSFT(KC_LBRC))
-#define KC_NEXT    LCTL(LSFT(KC_RBRC))
+#define KC_BACK    LGUI(KC_LBRC)
+#define KC_NEXT    LGUI(KC_RBRC)
 
 #define MOVE       LT(_MOVE_LINUX, KC_ESC)
 #define MOVE_MAC   LT(_MOVE_MAC, KC_ESC)
@@ -48,6 +49,7 @@ enum CustomKeys {
 
 #define WD_BACK    LALT(KC_LEFT)
 #define WD_FRWD    LALT(KC_RIGHT)
+#define WD_DELE    LALT(KC_BSPC)
 
 #define VD_1       LCTL(KC_F1)
 #define VD_2       LCTL(KC_F2)
@@ -88,6 +90,23 @@ enum CustomKeys {
 #define IJ_FIND    LGUI(LSFT(KC_F))
 #define IJ_RELD    LGUI(LSFT(KC_F9))
 
+/* VS Code shortcuts */
+#define VS_CMD     LGUI(LSFT(KC_A))
+#define VS_EXP     LGUI(LSFT(KC_E))
+#define VS_DBG     LGUI(LSFT(KC_F8))
+#define VS_SCC     LCTL(LSFT(KC_G))
+#define VS_RUN     KC_F5
+#define VS_STEP    KC_F8
+#define VS_INTO    KC_F7
+#define VS_BPT     LGUI(KC_F8)
+#define VS_OUT     LSFT(KC_F8)
+#define VS_STOP    LSFT(KC_F5)
+#define VS_TERM    LSFT(KC_ESC)
+#define VS_FILE    LSFT(LGUI(KC_O))
+#define VS_LINE    LGUI(KC_L)
+#define VS_MVUP    LSFT(LALT(KC_UP))
+#define VS_MVDN    LSFT(LALT(KC_DOWN))
+
 /* MacOS virtual desktop shortcuts */
 #define M_VD1      LCTL(KC_1)
 #define M_VD2      LCTL(KC_2)
@@ -107,4 +126,5 @@ enum CustomKeys {
 #define MM_RGHT    LCTL(LALT(LGUI(KC_RIGHT)))
 
 #define DF_1       DF(_QWERTY_MAC)
-#define DF_2       DF(_QWERTY_LINUX)
+#define DF_2       DF(_MOVE_MAC)
+#define DF_3       DF(_QWERTY_LINUX)

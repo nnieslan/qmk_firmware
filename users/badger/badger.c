@@ -14,11 +14,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "badger.h"
 
-bool      _capsLockState;
-
 __attribute__ ((weak))
 void keyboard_post_init_user(void) {
-  _capsLockState = false;
 }
 
 __attribute__ ((weak))
@@ -36,12 +33,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
       }
       break;
-    case KC_CAPS:
+    case SHEBANG:
       if (record->event.pressed) {
-        _capsLockState = !_capsLockState;
-        return true;
+        SEND_STRING("#! /bin/bash");
+        SEND_STRING(SS_TAP(X_ENTER));
+        return false;  
       }
-      break;
     default:
       return true;
   }
